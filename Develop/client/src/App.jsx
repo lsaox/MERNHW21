@@ -11,7 +11,8 @@ import { setContext } from '@apollo/client/link/context';
 
 import Navbar from './components/Navbar';
 //Make graphql endpoint
-const httpLink = createHttpLink({ uri: '/graphql' });
+const httpLink = createHttpLink({
+   uri: '/graphql' });
 
 //Construct request middleware thatll connect the JWT token
 const authLink = setContext((_, { headers }) => {

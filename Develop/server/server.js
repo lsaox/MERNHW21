@@ -25,8 +25,8 @@ const server = new ApolloServer({
 const app = express()
 
 //add server with graphql schema
-const startApolloServer = async  () => {
-    await server.start();
+const startApolloServer = async () => {
+  await server.start();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -48,5 +48,5 @@ db.once('open', () => {
   });
 });
 };
-
+//call function to start server
 startApolloServer()
